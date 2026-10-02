@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D InCertA | Muayene · Belgelendirme · Test · Denetim</title>
+<meta name="description" content="2006'dan beri bağımsız üçüncü taraf güvence hizmetleri. AB Onaylanmış Kuruluş 2530, ASME, API, PED, CPR, NDT, kaynak ve eğitim.">
+<style>
+:root{--bg:#0a1a2b;--bg2:#10253b;--card:#12304a;--ac:#3ec1f3;--tx:#eaf2f9;--mu:#9db3c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--ac)}.w{max-width:1120px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:9;background:rgba(10,26,43,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1d3a55}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:58px}
+nav b{font-size:20px}nav b i{color:var(--ac);font-style:normal}
+nav div a{color:var(--tx);text-decoration:none;margin-left:18px;font-size:14px}
+section{padding:70px 0}section:nth-of-type(even){background:var(--bg2)}
+.k{color:var(--ac);letter-spacing:.18em;font-size:12px;font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(40px,8vw,76px);margin:8px 0;line-height:1.05}h1 i{color:var(--ac);font-style:normal}
+h2{font-size:clamp(26px,4vw,38px);margin:6px 0 28px}
+.hero{padding:110px 0 70px;background:radial-gradient(circle at 80% 0,#1b4a6e 0,transparent 55%)}
+.hero p{max-width:620px;color:var(--mu);font-size:18px}.hero em{color:var(--ac)}
+.st{display:flex;flex-wrap:wrap;gap:34px;margin-top:36px}.st b{display:block;font-size:40px}.st span{color:var(--ac);font-size:12px;letter-spacing:.12em;font-weight:700}
+.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.c{background:var(--card);border:1px solid #1f4666;border-radius:12px;padding:22px}
+.c h3{margin:0 0 8px;font-size:18px}.c p{margin:0;color:var(--mu);font-size:15px}
+.ch{display:flex;flex-wrap:wrap;gap:8px}.ch span{border:1px solid #2a5a82;border-radius:20px;padding:5px 14px;font-size:14px;background:#0e2740}
+.big{font-size:34px;font-weight:800;color:var(--ac);display:block}
+.dd{position:relative;margin-left:18px}
+.dd button{padding:8px 16px;font-size:14px;border-radius:20px}
+.pn{display:none;position:absolute;right:0;top:46px;width:330px;max-width:calc(100vw - 24px);max-height:75vh;overflow:auto;flex-direction:column;gap:8px;background:var(--bg2);border:1px solid #1f4666;border-radius:12px;padding:10px;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.pn.o{display:flex}
+.pn .fr{padding:10px}
+.fr{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--tx);background:var(--card);border:1px solid #1f4666;border-radius:12px;padding:16px;transition:.2s}
+.fr:hover{border-color:var(--ac);transform:translateY(-2px)}
+.fr i{flex:none;width:46px;height:46px;border-radius:8px;background:#3f51b5;display:grid;place-items:center;font-style:normal;font-size:22px}
+.fr b{display:block;font-size:15px;line-height:1.3}.fr small{color:var(--mu);font-size:12px}
+#tk{position:relative;height:420px;border-radius:14px;overflow:hidden;background:#8fc0ee;touch-action:none;cursor:grab}
+#tk canvas{width:100%;height:100%;display:block}
+.h{position:absolute;left:12px;bottom:10px;background:rgba(10,26,43,.7);padding:4px 12px;border-radius:14px;font-size:12px}
+form{display:grid;gap:12px}input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #2a5a82;background:#0e2740;color:var(--tx);font:inherit}
+button{background:var(--ac);color:#06202f;border:0;border-radius:8px;padding:13px;font-weight:700;font-size:16px;cursor:pointer}
+.two{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+footer{padding:26px 0;text-align:center;color:var(--mu);font-size:13px;border-top:1px solid #1d3a55}
+@media(max-width:700px){nav div a:nth-child(n+4){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>3D <i>InCertA</i></b><div><a href="#hizmetler">Hizmetler</a><a href="#tank">3D Tank</a><a href="#akreditasyon">Akreditasyon</a><a href="#referanslar">Referanslar</a><a href="#iletisim">İletişim</a><span class="dd"><button id="fb" type="button">Formlar ▾</button><div id="fr" class="pn"></div></span></div></div></nav>
+
+<header class="hero"><div class="w">
+<div class="k">Muayene · Belgelendirme · Test · Denetim</div>
+<h1>3D <i>InCertA</i></h1>
+<p><em>Just To Be Sure.</em> 2006'dan beri. Petrol &amp; Gaz, Enerji, Nükleer, Kimya ve İmalat sektörleri için bağımsız üçüncü taraf güvence hizmetleri.</p>
+<div class="st" id="st"></div>
+</div></header>
+
+<section><div class="w">
+<div class="k">Kurumsal profil</div><h2>Yüksek riskli sektörler için bağımsız güvence</h2>
+<div class="g" id="pf"></div>
+</div></section>
+
+<section id="hizmetler"><div class="w">
+<div class="k">Hizmetlerimiz</div><h2>Sözleşmenizin dayandığı kodlara göre belgelendirme</h2>
+<div class="g" id="hz"></div>
+<h3 style="margin:34px 0 12px">Yedi tahribatsız muayene yöntemi, tamamı kendi personelimizle</h3>
+<div class="ch" id="ndt"></div>
+</div></section>
+
+<section><div class="w">
+<div class="k">Sektörler</div><h2>Hizmet verdiğimiz sektörler</h2>
+<div class="g" id="sk"></div>
+<h3 style="margin:34px 0 12px">17 ülkede hizmet verdik</h3>
+<div class="ch" id="ul"></div>
+</div></section>
+
+<section id="tank"><div class="w">
+<div class="k">Basınçlı ekipman</div><h2>Yatay basınçlı tank — 360° inceleyin</h2>
+<div id="tk"><div class="h">Sürükle: döndür · Kaydır: yakınlaştır</div></div>
+<p style="color:var(--mu)">Gövde, eliptik başlıklar, saddle ayaklar, flanşlı manhole ve üst nozzle'lardan oluşan etkileşimli model. Tasarım incelemesi, imalat ve muayene süreçlerimizin konusu olan ekipman tipini temsil eder.</p>
+</div></section>
+
+<section><div class="w">
+<div class="k">Ekibimiz</div><h2>Şirket bünyesindeki yetkinlikler</h2>
+<div class="g" id="ek"></div>
+</div></section>
+
+<section id="akreditasyon"><div class="w">
+<div class="k">Akreditasyon</div><h2>Akredite, onaylanmış ve bağımsız olarak doğrulanmış</h2>
+<div class="g" id="ak"></div>
+<p style="color:var(--mu);margin-top:20px">AB Onaylanmış Kuruluş 2530: PED 2014/68/AB ve CPR 305/2011 kapsamında, AB NANDO veri tabanında kayıtlı.</p>
+</div></section>
+
+<section id="referanslar"><div class="w">
+<div class="k">Referanslar</div><h2>Bizimle çalışmaya devam eden firmalar</h2>
+<div class="ch" id="rf"></div>
+</div></section>
+
+<section id="iletisim"><div class="w two">
+<div><div class="k">İletişim</div><h2>Bir sonraki belgelendirmenizi konuşalım.</h2>
+<p>📞 <a href="tel:+902164922110">+90 216 492 21 10</a><br>📠 +90 216 532 71 82<br>✉️ <a href="mailto:info@3d-incerta.com">info@3d-incerta.com</a><br>🌐 www.3d-incerta.com</p>
+<p style="color:var(--mu)">Örnek Mah. Fehmi Tokay Cad. No: 12<br>Göztepe Plaza, İç Kapı No: 6<br>Ataşehir / İstanbul, Türkiye</p></div>
+<form id="fm"><input name="name" placeholder="Ad Soyad" required maxlength="100"><input name="company" placeholder="Firma" maxlength="120"><input name="email" type="email" placeholder="E-posta" required maxlength="150"><input name="phone" placeholder="Telefon" maxlength="40"><textarea name="message" rows="4" placeholder="Mesajınız" required maxlength="2000"></textarea><button>Gönder</button><small id="ms" style="color:var(--ac)"></small></form>
+</div></section>
+<footer>© 2006–2026 3D InCertA · Sadece emin olmak için.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+const SUPABASE_URL='https://ricrxzwdcoyyfjtnrslf.supabase.co';
+const SUPABASE_ANON_KEY='BURAYA_ANON_PUBLIC_KEY';
+const $=id=>document.getElementById(id);
+const cards=(id,a)=>$(id).innerHTML=a.map(([t,p])=>`<div class="c"><h3>${t}</h3><p>${p}</p></div>`).join('');
+const chips=(id,a)=>$(id).innerHTML=a.map(x=>`<span>${x}</span>`).join('');
+$('st').innerHTML=[['20','Yıl'],['17','Ülke'],['2530','AB Onaylanmış Kuruluş'],['26','ASME damga sahibi firma'],['%60','ASME yetki belgeli firmalara hizmet payı']].map(([n,l])=>`<div><b>${n}</b><span>${l.toUpperCase()}</span></div>`).join('');
+cards('pf',[['2006\'dan bu yana İstanbul merkezli','Petrol & Gaz, Enerji ve İmalat sektörlerine muayene, belgelendirme, test, denetim ve proje yönetimi hizmetleri.'],['Adımız, kapsamımızdır','INspection, CERTification, Testing, Auditing. Mühendis, endüstriyel muayene elemanı ve tasarımcı kadrosu.'],['İşin başına gideriz','Muayene elemanları proje sahalarına konuşlandırılır; doğrulama imalatın yapıldığı yerde gerçekleşir.']]);
+cards('hz',[
+['ASME Hizmetleri','Kazan, kollektör, basınçlı kap ve borulama için ASME Nükleer ve Nükleer Dışı belgelendirme. 5 Yetkili Muayene Elemanı, 2 Süpervizör.'],
+['Onaylanmış Kuruluş (NoBo)','PED 2014/68/AB ve CPR 305/2011 kapsamında AB Onaylanmış Kuruluş 2530. 8 LPG küresel tankın PED + ASME U2 ile belgelendirilmesi Türkiye\'de ilk.'],
+['Tahribatsız Muayene','VT, RT, MT, PT, UT, TOFD ve PA. Seviye II ve III personelimizce, taşerona verilmeden.'],
+['Kaynak ve Sistem Belgelendirme','PQR/WPS/WPQ, EN ISO 3834, EN 15085 ve EN 1090. 8 IWE/EWE Kaynak Mühendisi.'],
+['2. ve 3. Taraf, İnşaat Muayenesi','Hammaddeden teslime imalat ve saha muayenesi; yurt dışında partner kuruluşlarla aynı raporlama standardı.'],
+['İşletme İçi Muayene','API 653, 570 ve 510. Depolama tankları, borulama ve basınçlı kaplar; 4.500 MW ENKA santrali dahil.'],
+['Tedarik Zinciri','Borular, vanalar, kazanlar ve basınçlı ekipmanlar için sevkiyat öncesi kaynağında muayene.'],
+['Tasarım İncelemesi','AD 2000, EN 13445, ASME Sec. VIII, API 650/620 kodlarına göre COMPRESS, PV Elite, Visual Vessel Design ile.'],
+['Kriyojenik Belgelendirme','EN 13458 ve ASME Sec. VIII Div.1 Ek 44 kapsamında soğuk germe. LNG, LIN, LAR, LOX, NH₃.'],
+['Eğitim','ASME, API, AWS, EN, ISO kod eğitimleri; EN ISO 9712 ve SNT-TC-1A personel belgelendirme; İSG eğitimleri.']]);
+chips('ndt',['VT Görsel','RT Radyografik','MT Manyetik Parçacık','PT Penetrant','UT Ultrasonik','TOFD Uçuş Zamanı','PA Faz Dizili']);
+cards('sk',[['Petrol ve Gaz','Rafineriler, terminaller, boru hatları, proses ekipmanları'],['Enerji Üretimi','Kombine çevrim santralleri, HRSG kazanları, buhar sistemleri'],['Nükleer','ASME Bölüm III: NPT, NA, NS ve MO belgelendirmesi'],['Kimya ve Petrokimya','Depolama, kriyojenik ve reaktif hizmet ekipmanları'],['İmalat ve Üretim','Basınçlı kaplar, tanklar, borulama, çelik konstrüksiyon'],['İnşaat ve Altyapı','Köprüler, limanlar, terminaller, oteller, alışveriş merkezleri']]);
+chips('ul',['Türkiye','Azerbaycan','Birleşik Krallık','İspanya','Portekiz','Norveç','Fransa','İtalya','Çekya','Irak','Suriye','BAE','İsrail','Kıbrıs','Mısır','Cezayir','Rusya']);
+$('ek').innerHTML=[['ASME','2 Authorized Nuclear Supervisor · 2 Authorized Inspector Supervisor · 2 Authorized Nuclear Inspector · 5 Authorized Inspector'],['API','2 API 653/570 Muayene Elemanı · 3 API 510 Muayene Elemanı'],['Avrupa Yönetmelikleri','9 PED Muayene Elemanı · 7 CPR Denetçisi · 4 EN 1090-1 Denetçisi'],['Kaynak','8 Avrupa Kaynak Mühendisi · 1 CSWIP 3.2 Kaynak Muayene Elemanı'],['Tahribatsız Muayene','2 Seviye III · 8 Seviye II RT · 8 Seviye II UT · 10 Seviye II MT, PT, VT'],['Mühendislik ve Denetim','11 Makine Mühendisi · 1 İnşaat Mühendisi · 1 NACE Kaplama Muayene Elemanı · 2 ISO 9001 Baş Denetçi']].map(([t,p])=>`<div class="c"><h3>${t}</h3><p>${p}</p></div>`).join('');
+$('ak').innerHTML=[['TS EN ISO/IEC 17020:2012','A Tipi muayene kuruluşu yetkisi'],['TS EN ISO/IEC 17024:2012','Personel belgelendirme kuruluşu yetkisi (AB-0041-P)'],['TS EN ISO/IEC 17065:2012','Ürün belgelendirme kuruluşu yetkisi']].map(([t,p])=>`<div class="c"><span class="big" style="font-size:19px">${t}</span><p>${p}</p></div>`).join('');
+chips('rf',['bp','GE','Siemens','Mitsubishi Power','Alstom','TotalEnergies','Honeywell UOP','Ferrostaal','IHI','SOCAR-STP','ENKA','Tüpraş','Çimtaş','Gübretaş','Yılport','Rönesans','Aygaz','ÜNKA','Ayvaz','Ergil','Mimaş','Akarmak','ATM','Çiltuğ','Havatek','Deha Tech','Ekon','Vito']);
+
+// Formlar: PDF dosyalarını formlar/ klasörüne bu adlarla koyun
+$('fr').innerHTML=[['💼','Kaynakçı Belgelendirme','kaynakci-belgelendirme'],['🎯','Yapı Malzemeleri Yönetmeliği Kapsamında Yapılan Belgelendirme','yapi-malzemeleri-belgelendirme'],['📄','ISO 3834 Belgelendirme','iso-3834-belgelendirme'],['📄','EN 15085 Belgelendirme','en-15085-belgelendirme'],['📋','PED-NDT Personel Belgelendirme','ped-ndt-personel-belgelendirme'],['📄','Tahribatsız Muayene Personel Belgelendirme','tm-personel-belgelendirme']].map(([i,t,f])=>`<a class="fr" href="formlar/${f}.pdf" target="_blank" rel="noopener"><i>${i}</i><div><b>${t}</b><small>Başvuru Formu</small></div></a>`).join('');
+
+$('fb').onclick=e=>{e.stopPropagation();$('fr').classList.toggle('o')};
+document.addEventListener('click',e=>{if(!$('fr').contains(e.target))$('fr').classList.remove('o')});
+
+// Supabase contact form
+const sb=SUPABASE_ANON_KEY.startsWith('BURAYA')?null:supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+$('fm').onsubmit=async e=>{e.preventDefault();const m=$('ms'),d=Object.fromEntries(new FormData(e.target));
+ if(!sb){m.textContent='Form henüz yapılandırılmadı. Lütfen info@3d-incerta.com adresine yazın.';return}
+ m.textContent='Gönderiliyor...';
+ const{error}=await sb.from('contact_messages').insert(d);
+ m.textContent=error?'Gönderilemedi, lütfen e-posta ile ulaşın.':'Teşekkürler, mesajınız alındı.';if(!error)e.target.reset()};
+
+// 3D tank
+(function(){const box=$('tk'),r=new THREE.WebGLRenderer({antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));r.shadowMap.enabled=true;box.prepend(r.domElement);
+const s=new THREE.Scene(),cv=document.createElement('canvas');cv.width=2;cv.height=256;const g=cv.getContext('2d'),gr=g.createLinearGradient(0,0,0,256);gr.addColorStop(0,'#2f7fd1');gr.addColorStop(.7,'#8fc0ee');gr.addColorStop(1,'#e6f1fb');g.fillStyle=gr;g.fillRect(0,0,2,256);s.background=new THREE.CanvasTexture(cv);
+const cam=new THREE.PerspectiveCamera(40,1,.1,200);s.add(new THREE.HemisphereLight(0xcfe6ff,0xc9b48a,.75));
+const sun=new THREE.DirectionalLight(0xffffff,.9);sun.position.set(-6,9,7);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-8,right:8,top:8,bottom:-8,near:1,far:30});s.add(sun);
+const gd=new THREE.Mesh(new THREE.CircleGeometry(40,48),new THREE.MeshStandardMaterial({color:0xd8c39a,roughness:1}));gd.rotation.x=-Math.PI/2;gd.receiveShadow=true;s.add(gd);
+const W=new THREE.MeshStandardMaterial({color:0xf5f5f1,roughness:.45,metalness:.05}),D=new THREE.MeshStandardMaterial({color:0x1a1a1a,roughness:.5,metalness:.6});
+const add=(geo,mat,p,par=s)=>{const m=new THREE.Mesh(geo,mat);m.position.set(...p);m.castShadow=m.receiveShadow=true;par.add(m);return m};
+const R=1.2,L=4,h=.6,CY=R+.65,pts=[],N=24;
+for(let i=0;i<=N;i++){const t=Math.PI/2*i/N;pts.push(new THREE.Vector2(R*Math.sin(t),-L/2-h*Math.cos(t)))}
+for(let i=0;i<=N;i++){const t=Math.PI/2*i/N;pts.push(new THREE.Vector2(R*Math.cos(t),L/2+h*Math.sin(t)))}
+const T=new THREE.Group();T.position.y=CY;s.add(T);add(new THREE.LatheGeometry(pts,64),W,[0,0,0],T).rotation.z=-Math.PI/2;
+[-2,2,-.7].forEach(x=>add(new THREE.TorusGeometry(R+.006,.014,8,64),W,[x,0,0],T).rotation.y=Math.PI/2);
+[-1.3,1.1].forEach(x=>{add(new THREE.BoxGeometry(.3,1.15,1.7),W,[x,-CY+.575,0]);add(new THREE.BoxGeometry(.8,.1,2.1),W,[x,.05,0])});
+const mw=new THREE.Group();mw.position.set(L/2+h-.12,-.05,0);T.add(mw);
+const cy=(rr,len,x)=>add(new THREE.CylinderGeometry(rr,rr,len,48),W,[x,0,0],mw).rotation.z=Math.PI/2;cy(.55,.5,.15);cy(.72,.1,.42);cy(.74,.16,.58);
+for(let i=0;i<24;i++){const a=i/24*Math.PI*2;add(new THREE.CylinderGeometry(.04,.04,.34,10),D,[.52,Math.cos(a)*.64,Math.sin(a)*.64],mw).rotation.z=Math.PI/2}
+add(new THREE.TorusGeometry(.35,.05,8,24,Math.PI),W,[.45,.72,0],mw).rotation.y=Math.PI/2;
+add(new THREE.BoxGeometry(.03,.22,.28),new THREE.MeshStandardMaterial({color:0xb09070,metalness:.7,roughness:.4}),[L/2+.4,-.1,.85],T).rotation.y=-.9;
+[[1.2,.32],[-1.5,.22]].forEach(([x,q])=>{add(new THREE.CylinderGeometry(q*.55,q*.55,.35,32),W,[x,R+.1,0],T);add(new THREE.CylinderGeometry(q,q,.05,32),W,[x,R+.3,0],T);add(new THREE.BoxGeometry(q*1.5,.025,q*1.5),new THREE.MeshStandardMaterial({color:0x7b6a50}),[x,R+.34,0],T)});
+let az=-.5,el=.28,dist=11,dr=false,px=0,py=0,auto=true;const c=r.domElement;
+c.addEventListener('pointerdown',e=>{c.setPointerCapture(e.pointerId);dr=true;px=e.clientX;py=e.clientY;auto=false});
+c.addEventListener('pointerup',()=>dr=false);
+c.addEventListener('pointermove',e=>{if(!dr)return;az-=(e.clientX-px)*.008;el=Math.min(1.4,Math.max(.02,el+(e.clientY-py)*.006));px=e.clientX;py=e.clientY});
+c.addEventListener('wheel',e=>{e.preventDefault();dist=Math.min(20,Math.max(5,dist*(1+e.deltaY*.001)))},{passive:false});
+const rs=()=>{r.setSize(box.clientWidth,box.clientHeight);cam.aspect=box.clientWidth/box.clientHeight;cam.updateProjectionMatrix()};addEventListener('resize',rs);rs();
+(function loop(){requestAnimationFrame(loop);if(auto&&!dr)az+=.004;cam.position.set(Math.sin(az)*Math.cos(el)*dist,CY*.7+Math.sin(el)*dist,Math.cos(az)*Math.cos(el)*dist);cam.lookAt(0,CY*.7,0);r.render(s,cam)})();
+})();
+</script>
+</body>
+</html>
